@@ -93,7 +93,7 @@ public:
                 mn = min(abs(xvec[i] - yvec[j]), mn);
             }
         }
-        return mn;
+        return (!mn ? 1 : mn);
     }
     void answer(){
         Node *tmp = head;
