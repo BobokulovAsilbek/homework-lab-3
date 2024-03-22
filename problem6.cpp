@@ -90,10 +90,10 @@ public:
         int mn = INT_MAX;
         for(int i = 0; i < size(xvec); i++){
             for(int j = 0; j < size(yvec); j++){
-                mn = min(abs(xvec[i] - yvec[j]), mn);
+                if(xvec[i] != yvec[j]) mn = min(abs(xvec[i] - yvec[j]), mn);
             }
         }
-        return (!mn ? 1 : mn);
+        return mn;
     }
     void answer(){
         Node *tmp = head;
